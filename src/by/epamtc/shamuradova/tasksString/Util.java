@@ -3,6 +3,7 @@ package by.epamtc.shamuradova.tasksString;
 public class Util {
 
     private static final String PUNCTUATION_MARKS = "[.,!?:;]+";
+    private static final String MUL_SPACE = " +";
 
     public static String[] decideOddAndEvenChars(String word) {
 
@@ -285,7 +286,7 @@ public class Util {
 
     public static String[] highlightWords(String input) {
 
-        return input.replaceAll(PUNCTUATION_MARKS, " ").split(" +");
+        return input.replaceAll(PUNCTUATION_MARKS, " ").split(MUL_SPACE);
     }
 
 }
