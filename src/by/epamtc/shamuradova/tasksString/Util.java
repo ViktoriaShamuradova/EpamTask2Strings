@@ -120,7 +120,7 @@ public class Util {
         return count;
     }
 
-    public static String getWordsInReverseOrder(String words) {
+    public static String wordsInReverseOrder(String words) {
         String[] arrayOfWords = words.split(" ");
         String reverseWords = "";
         for (int i = 0; i < arrayOfWords.length; i++) {
