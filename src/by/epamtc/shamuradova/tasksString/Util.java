@@ -2,6 +2,8 @@ package by.epamtc.shamuradova.tasksString;
 
 public class Util {
 
+    private static final String PUNCTUATION_MARKS = "[.,!?:;]+";
+
     public static String[] decideOddAndEvenChars(String word) {
 
             if (word.length() == 0) {
@@ -283,7 +285,7 @@ public class Util {
 
     public static String[] highlightWords(String input) {
 
-        return input.replaceAll("[.,!?:;]+", " ").split(" +");
+        return input.replaceAll(PUNCTUATION_MARKS, " ").split(" +");
     }
 
 }
