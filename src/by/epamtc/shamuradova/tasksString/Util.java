@@ -1,9 +1,9 @@
-package by.epamtc.tasksString;
+package by.epamtc.shamuradova.tasksString;
 
 public class Util {
 
     public static String[] decideOddAndEvenChars(String word) {
-        if (word != null) {
+
             if (word.length() == 0) {
                 return new String[0];
             }
@@ -21,11 +21,8 @@ public class Util {
             }
             changedWords[0] = new String(leftSb);
             changedWords[1] = new String(rightSb);
-            return changedWords;
 
-        } else {
-            return null;
-        }
+            return changedWords;
     }
 
     public static String upperAndLowerCasePercentage(String word) {
@@ -54,26 +51,28 @@ public class Util {
     }
 
     public static String deleteDuplicateChars(String word) {
-        if (word != null) {
+
             for (int i = 1; i < word.length(); i++) {
+
                 if (word.charAt(i) == word.charAt(i - 1)) {
                     word = word.substring(0, i) + word.substring(i + 1);
                 }
+
                 for (int j = i + 1; j < word.length(); j++) {
+
                     if (word.charAt(i) == word.charAt(j)) {
                         word = word.substring(0, j) + word.substring(j + 1);
                     }
                 }
             }
             return word;
-        } else {
-            return null;
-        }
     }
 
     public static String reverseString(String inputString) {
+
         int stringLength = inputString.length();
         String result = "";
+
         for (int i = 0; i < stringLength; i++) {
             result = inputString.charAt(i) + result;
         }
@@ -191,7 +190,7 @@ public class Util {
 
     public static boolean isPalindrome(String input) {
         if (input == null) return false;
-        //input = input.replaceAll("[^\\w]", "");
+
         StringBuilder sb = new StringBuilder(input);
         sb.reverse();
         String invertedText = sb.toString();
@@ -201,6 +200,7 @@ public class Util {
     }
 
     public static String replaceSubstring(String input, String replace, String toReplace) {
+
         if (input == null || replace == null || toReplace == null) return "not valid argument";
         return input.replaceAll(replace, toReplace);
     }
@@ -272,7 +272,7 @@ public class Util {
     }
 
     public static String removeExtraSpaces(String input) {
-        if (input == null) return "not valid";
+
         String twoSpaces = "  ";
         String oneSpace = " ";
         while (input.contains(twoSpaces)) {
@@ -282,6 +282,7 @@ public class Util {
     }
 
     public static String[] highlightWords(String input) {
+
         return input.replaceAll("[.,!?:;]+", " ").split(" +");
     }
 
