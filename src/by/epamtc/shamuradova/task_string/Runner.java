@@ -1,4 +1,4 @@
-package by.epamtc.shamuradova.tasksString;
+package by.epamtc.shamuradova.task_string;
 
 import java.util.Arrays;
 
@@ -24,7 +24,7 @@ public class Runner {
 
         System.out.println(Util.countOccurrences("Vikaikaikaaikaaaika", "ika"));
 
-        System.out.println(Util.getWordsInReverseOrder("Мама мыла раму"));
+        System.out.println(Util.wordsInReverseOrder("Мама мыла раму"));
         System.out.println(Util.replaceSpaceWithAsterisk("    Мама   мыла раму   "));
 
         System.out.println(Util.replaceLettersInLongestWord(name, "а", "в"));

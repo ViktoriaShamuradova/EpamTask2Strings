@@ -1,4 +1,4 @@
-package by.epamtc.shamuradova.tasksString;
+package by.epamtc.shamuradova.task_string;
 
 public class Util {
 
